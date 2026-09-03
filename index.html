@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Warrior | Walk Run Wrestle</title>
+
+<style>
+:root{
+  --green:#048d64;
+  --black:#111111;
+  --grey:#666666;
+  --light:#f5f5f5;
+  --border:#e5e5e5;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#fff;
+  color:var(--black);
+  line-height:1.6;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:-.5px;
+}
+
+.logo span{
+  color:var(--green);
+}
+
+.nav-links{
+  display:flex;
+  gap:24px;
+  font-size:14px;
+  font-weight:700;
+}
+
+.nav-links a:hover{
+  color:var(--green);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  max-width:1200px;
+  margin:auto;
+  padding:55px 22px 75px;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:65px;
+  align-items:center;
+}
+
+.hero-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:570px;
+  height:auto;
+  object-fit:contain;
+}
+
+.eyebrow{
+  color:var(--green);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:clamp(42px,6vw,72px);
+  line-height:.95;
+  letter-spacing:-3px;
+  font-weight:1000;
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+
+.hero .price{
+  font-size:28px;
+  font-weight:900;
+  margin:22px 0 5px;
+}
+
+.hero-meta{
+  color:var(--grey);
+  font-weight:700;
+  margin-bottom:24px;
+}
+
+.hero-tagline{
+  display:inline-block;
+  background:var(--black);
+  color:#fff;
+  padding:10px 15px;
+  font-weight:900;
+  font-size:15px;
+  letter-spacing:1px;
+  margin-bottom:20px;
+}
+
+.hero h2{
+  font-size:clamp(27px,4vw,42px);
+  line-height:1.05;
+  margin:5px 0 15px;
+  letter-spacing:-1px;
+}
+
+.hero-copy{
+  font-size:18px;
+  color:#444;
+  max-width:600px;
+}
+
+.cta{
+  display:inline-block;
+  margin-top:22px;
+  background:var(--green);
+  color:#fff;
+  padding:15px 27px;
+  border-radius:5px;
+  font-weight:900;
+  font-size:16px;
+  transition:.2s ease;
+}
+
+.cta:hover{
+  transform:translateY(-2px);
+  filter:brightness(.95);
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  background:#fafafa;
+}
+
+.stats-inner{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+  text-align:center;
+  padding:25px 15px;
+  border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+  border-right:none;
+}
+
+.stat strong{
+  display:block;
+  font-size:28px;
+  font-weight:1000;
+}
+
+.stat span{
+  color:var(--grey);
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:85px 22px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.section-title .small{
+  color:var(--green);
+  font-size:13px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:2px;
+}
+
+.section-title h2{
+  font-size:clamp(34px,5vw,54px);
+  line-height:1;
+  margin:8px 0 15px;
+  letter-spacing:-2px;
+}
+
+.section-title p{
+  max-width:650px;
+  margin:auto;
+  color:#555;
+  font-size:17px;
+}
+
+
+/* =========================
+   PROGRESSION
+========================= */
+
+.progression-section{
+  background:#fff;
+}
+
+.progression-intro{
+  max-width:760px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.progression-intro h3{
+  font-size:clamp(30px,5vw,48px);
+  line-height:1;
+  margin:0 0 15px;
+  letter-spacing:-1.5px;
+}
+
+.progression-intro h3 span{
+  color:var(--green);
+}
+
+.progression-intro p{
+  color:#555;
+  font-size:18px;
+  margin:0;
+}
+
+
+/* =========================
+   DAY CARDS
+========================= */
+
+.days{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  max-width:900px;
+  margin:auto;
+}
+
+.day{
+  border:1px solid var(--border);
+  border-radius:9px;
+  padding:25px;
+  background:#fff;
+  position:relative;
+  overflow:hidden;
+  transition:.2s ease;
+}
+
+.day:hover{
+  transform:translateY(-3px);
+  border-color:var(--green);
+}
+
+.day-number{
+  color:var(--green);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.day-distance{
+  font-size:46px;
+  line-height:1;
+  font-weight:1000;
+  margin:10px 0;
+  letter-spacing:-2px;
+}
+
+.day-total{
+  font-size:13px;
+  color:var(--grey);
+  font-weight:700;
+}
+
+.day-joke{
+  margin-top:13px;
+  font-size:14px;
+  font-weight:700;
+}
+
+
+/* =========================
+   21K FINISH
+========================= */
+
+.finish-box{
+  max-width:900px;
+  margin:45px auto 0;
+  background:var(--black);
+  color:#fff;
+  border-radius:10px;
+  padding:45px 25px;
+  text-align:center;
+}
+
+.finish-box .small{
+  color:#6bd8b5;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.finish-box h3{
+  font-size:clamp(60px,10vw,100px);
+  line-height:.9;
+  margin:10px 0;
+  letter-spacing:-5px;
+}
+
+.finish-box p{
+  color:#ccc;
+  font-size:18px;
+  max-width:650px;
+  margin:0 auto;
+}
+
+.finish-equation{
+  margin-top:22px;
+  font-size:20px;
+  font-weight:900;
+  color:#fff;
+}
+
+.finish-equation span{
+  color:#6bd8b5;
+}
+
+
+/* =========================
+   YOUR WAY
+========================= */
+
+.your-way{
+  background:#f5f5f5;
+}
+
+.rule-box{
+  max-width:850px;
+  margin:auto;
+  background:#fff;
+  border:2px solid var(--green);
+  border-radius:10px;
+  padding:40px;
+  text-align:center;
+}
+
+.rule-box .label{
+  color:var(--green);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.rule-box h3{
+  font-size:clamp(34px,5vw,52px);
+  line-height:1;
+  margin:10px 0 15px;
+  letter-spacing:-2px;
+}
+
+.rule-box p{
+  max-width:700px;
+  margin:auto;
+  color:#555;
+  font-size:18px;
+}
+
+.flex-message{
+  text-align:center;
+  max-width:760px;
+  margin:50px auto 0;
+}
+
+.flex-message h3{
+  font-size:clamp(30px,5vw,46px);
+  line-height:1;
+  margin-bottom:15px;
+  letter-spacing:-1.5px;
+}
+
+.flex-message h3 span{
+  color:var(--green);
+}
+
+.flex-message p{
+  color:#555;
+  font-size:18px;
+  margin:9px 0;
+}
+
+
+/* =========================
+   EXAMPLE
+========================= */
+
+.example{
+  max-width:800px;
+  margin:45px auto 0;
+  background:#fff;
+  border-radius:9px;
+  overflow:hidden;
+  border:1px solid var(--border);
+}
+
+.example-title{
+  padding:20px;
+  background:var(--black);
+  color:#fff;
+  text-align:center;
+  font-weight:900;
+  font-size:17px;
+}
+
+.example-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:17px 22px;
+  border-bottom:1px solid var(--border);
+}
+
+.example-row:last-child{
+  border-bottom:none;
+}
+
+.example-row strong{
+  color:var(--green);
+}
+
+.example-total{
+  padding:20px;
+  text-align:center;
+  background:var(--green);
+  color:#fff;
+  font-size:21px;
+  font-weight:1000;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.dark-section{
+  background:var(--black);
+  color:#fff;
+}
+
+.dark-section .section-title p{
+  color:#bbb;
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.step{
+  border:1px solid #333;
+  padding:30px;
+  border-radius:8px;
+}
+
+.step-number{
+  color:#6bd8b5;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.step h3{
+  font-size:25px;
+  margin:10px 0;
+}
+
+.step p{
+  color:#bbb;
+  margin:0;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-box{
+  max-width:900px;
+  margin:auto;
+  aspect-ratio:16/9;
+  background:#111;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  text-align:center;
+  padding:30px;
+}
+
+.video-box div{
+  max-width:500px;
+}
+
+.video-box strong{
+  display:block;
+  color:#6bd8b5;
+  font-size:14px;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.video-box h3{
+  font-size:30px;
+  margin:0 0 8px;
+}
+
+.video-box p{
+  color:#aaa;
+  margin:0;
+}
+
+
+/* =========================
+   WHAT YOU GET
+========================= */
+
+.get-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  max-width:850px;
+  margin:auto;
+}
+
+.get-item{
+  padding:25px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  background:#fff;
+}
+
+.get-item strong{
+  display:block;
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+.get-item p{
+  margin:0;
+  color:#666;
+}
+
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta{
+  background:#f5f5f5;
+  text-align:center;
+  padding:90px 22px;
+}
+
+.final-cta h2{
+  font-size:clamp(38px,6vw,64px);
+  line-height:1;
+  margin:0 0 15px;
+  letter-spacing:-2px;
+}
+
+.final-cta p{
+  max-width:600px;
+  margin:0 auto;
+  color:#555;
+  font-size:18px;
+}
+
+.final-price{
+  font-size:32px;
+  font-weight:1000;
+  margin:20px 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#111;
+  color:#fff;
+  padding:35px 22px;
+  text-align:center;
+}
+
+footer strong{
+  font-size:18px;
+}
+
+footer span{
+  color:#6bd8b5;
+}
+
+footer p{
+  color:#888;
+  font-size:13px;
+  margin:8px 0 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:850px){
+
+  .nav{
+    padding:14px 16px;
+  }
+
+  .nav-links{
+    gap:12px;
+    font-size:12px;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    gap:30px;
+    padding:30px 18px 55px;
+  }
+
+  .hero-image{
+    order:1;
+  }
+
+  .hero-content{
+    order:2;
+  }
+
+  .hero-image img{
+    max-width:470px;
+  }
+
+  .hero h1{
+    font-size:clamp(38px,11vw,58px);
+    letter-spacing:-2px;
+    line-height:.95;
+    overflow-wrap:break-word;
+  }
+
+  .hero h2{
+    font-size:32px;
+  }
+
+  .hero-copy{
+    font-size:16px;
+  }
+
+  .stats-inner{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat:nth-child(2){
+    border-right:none;
+  }
+
+  .stat:nth-child(-n+2){
+    border-bottom:1px solid var(--border);
+  }
+
+  .section{
+    padding:65px 18px;
+  }
+
+  .days{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery img{
+    aspect-ratio:auto;
+  }
+
+  .get-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  .nav{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .nav-links{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .hero{
+    padding-top:20px;
+  }
+
+  .hero h1{
+    font-size:39px;
+    letter-spacing:-1.5px;
+  }
+
+  .hero-tagline{
+    font-size:13px;
+    padding:9px 12px;
+  }
+
+  .stat strong{
+    font-size:23px;
+  }
+
+  .stat span{
+    font-size:11px;
+  }
+
+  .section-title h2{
+    letter-spacing:-1px;
+  }
+
+  .days{
+    grid-template-columns:1fr;
+  }
+
+  .day-distance{
+    font-size:42px;
+  }
+
+  .rule-box{
+    padding:30px 20px;
+  }
+
+  .example-row{
+    padding:15px;
+    font-size:14px;
+  }
+
+  .finish-box{
+    padding:38px 18px;
+  }
+
+  .finish-box h3{
+    letter-spacing:-3px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+  <nav class="nav">
+
+    <a href="/" class="logo">
+      WALK RUN <span>WRESTLE</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/shop/">Shop</a>
+      <a href="/challenges/">Challenges</a>
+      <a href="/community/">Community</a>
+    </div>
+
+  </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-image">
+
+    <img
+      src="images/warrior-medal.png"
+      alt="The Warrior 21K medal"
+    >
+
+  </div>
+
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Walk Run Wrestle Challenge
+    </div>
+
+    <h1>
+      THE WARRIOR
+    </h1>
+
+    <div class="price">
+      £19.99
+    </div>
+
+    <div class="hero-meta">
+      Heavy Medal • App Included
+    </div>
+
+    <div class="hero-tagline">
+      BUILD YOUR 21K.
+    </div>
+
+    <h2>
+      THE DISTANCE GETS BIGGER.
+    </h2>
+
+    <p class="hero-copy">
+      Six challenge days.
+      Six different targets.
+      Start at 1K and build your way to 21K.
+      How you complete each day's distance is completely up to you.
+    </p>
+
+    <a href="#enter" class="cta">
+      ENTER THE RING
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+  <div class="stats-inner">
+
+    <div class="stat">
+      <strong>6</strong>
+      <span>Challenge Days</span>
+    </div>
+
+    <div class="stat">
+      <strong>21K</strong>
+      <span>Total Distance</span>
+    </div>
+
+    <div class="stat">
+      <strong>1K → 6K</strong>
+      <span>Daily Targets</span>
+    </div>
+
+    <div class="stat">
+      <strong>£19.99</strong>
+      <span>Entry</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROGRESSION
+========================= -->
+
+<section class="section progression-section">
+
+  <div class="section-title">
+
+    <div class="small">
+      The Warrior Challenge
+    </div>
+
+    <h2>
+      Start Small. Finish Strong.
+    </h2>
+
+    <p>
+      The Warrior doesn't throw 21K at you on day one.
+      You build it one challenge day at a time.
+    </p>
+
+  </div>
+
+
+  <div class="progression-intro">
+
+    <h3>
+      Every day gets a little more <span>Warrior.</span>
+    </h3>
+
+    <p>
+      Your daily target increases from 1K all the way to 6K.
+      Complete the target and move on to the next one.
+    </p>
+
+  </div>
+
+
+  <div class="days">
+
+
+    <div class="day">
+
+      <div class="day-number">
+        Day 1
+      </div>
+
+      <div class="day-distance">
+        1K
+      </div>
+
+      <div class="day-total">
+        Challenge total: 1K
+      </div>
+
+      <div class="day-joke">
+        Nice and easy. Don't get cocky.
+      </div>
+
+    </div>
+
+
+    <div class="day">
+
+      <div class="day-number">
+        Day 2
+      </div>
+
+      <div class="day-distance">
+        2K
+      </div>
+
+      <div class="day-total">
+        Challenge total: 3K
+      </div>
+
+      <div class="day-joke">
+        Okay. We're actually doing this.
+      </div>
+
+    </div>
+
+
+    <div class="day">
+
+      <div class="day-number">
+        Day 3
+      </div>
+
+      <div class="day-distance">
+        3K
+      </div>
+
+      <div class="day-total">
+        Challenge total: 6K
+      </div>
+
+      <div class="day-joke">
+        Still with us? Excellent.
+      </div>
+
+    </div>
+
+
+    <div class="day">
+
+      <div class="day-number">
+        Day 4
+      </div>
+
+      <div class="day-distance">
+        4K
+      </div>
+
+      <div class="day-total">
+        Challenge total: 10K
+      </div>
+
+      <div class="day-joke">
+        Right. This is becoming a thing.
+      </div>
+
+    </div>
+
+
+    <div class="day">
+
+      <div class="day-number">
+        Day 5
+      </div>
+
+      <div class="day-distance">
+        5K
+      </div>
+
+      <div class="day-total">
+        Challenge total: 15K
+      </div>
+
+      <div class="day-joke">
+        You definitely agreed to this.
+      </div>
+
+    </div>
+
+
+    <div class="day">
+
+      <div class="day-number">
+        Day 6
+      </div>
+
+      <div class="day-distance">
+        6K
+      </div>
+
+      <div class="day-total">
+        Challenge total: 21K
+      </div>
+
+      <div class="day-joke">
+        One last push. Then we celebrate.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="finish-box">
+
+    <div class="small">
+      Warrior Complete
+    </div>
+
+    <h3>
+      21K
+    </h3>
+
+    <p>
+      You didn't have to smash out a 21K run.
+      You built it.
+      One challenge day at a time.
+    </p>
+
+    <div class="finish-equation">
+      <span>1K</span> + <span>2K</span> + <span>3K</span> +
+      <span>4K</span> + <span>5K</span> + <span>6K</span>
+      = <span>21K</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     YOUR WAY
+========================= -->
+
+<section class="your-way">
+
+  <div class="section">
+
+    <div class="section-title">
+
+      <div class="small">
+        The Warrior Rule
+      </div>
+
+      <h2>
+        Your Distance. Your Way.
+      </h2>
+
+      <p>
+        The target is fixed.
+        How you get there isn't.
+      </p>
+
+    </div>
+
+
+    <div class="rule-box">
+
+      <div class="label">
+        One thing matters
+      </div>
+
+      <h3>
+        Hit the day's target.
+      </h3>
+
+      <p>
+        If today's target is 4K, you need to complete 4K.
+        But you don't have to run it, and you don't have to do it all at once.
+      </p>
+
+    </div>
+
+
+    <div class="flex-message">
+
+      <h3>
+        <span>Walk it.</span>
+        Run it.
+        Split it.
+      </h3>
+
+      <p>
+        A morning walk.
+        A lunchtime wander.
+        A quick run around the block.
+        Walking the dog.
+        Walking to the shops.
+      </p>
+
+      <p>
+        It all counts towards your daily target.
+      </p>
+
+      <p>
+        Stop for a coffee.
+        Take a breather.
+        Carry on when you're ready.
+      </p>
+
+      <p>
+        <strong>
+          Just hit the distance for that challenge day.
+        </strong>
+      </p>
+
+    </div>
+
+
+    <div class="example">
+
+      <div class="example-title">
+        Say today's target is 5K...
+      </div>
+
+      <div class="example-row">
+        <span>Morning dog walk</span>
+        <strong>2K</strong>
+      </div>
+
+      <div class="example-row">
+        <span>Quick run later</span>
+        <strong>1K</strong>
+      </div>
+
+      <div class="example-row">
+        <span>Walk to the shops</span>
+        <strong>2K</strong>
+      </div>
+
+      <div class="example-total">
+        5K COMPLETE ✓
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section class="dark-section">
+
+  <div class="section">
+
+    <div class="section-title">
+
+      <div class="small">
+        How It Works
+      </div>
+
+      <h2>
+        Six Days. One Warrior.
+      </h2>
+
+      <p>
+        The challenge gets tougher.
+        You get stronger.
+      </p>
+
+    </div>
+
+
+    <div class="steps">
+
+
+      <div class="step">
+
+        <div class="step-number">
+          STEP 01
+        </div>
+
+        <h3>
+          Start at 1K
+        </h3>
+
+        <p>
+          Your first challenge day starts with a manageable 1K.
+          Get moving and get on the board.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          STEP 02
+        </div>
+
+        <h3>
+          Build Every Day
+        </h3>
+
+        <p>
+          Your target increases by 1K each challenge day:
+          2K, 3K, 4K, 5K and finally 6K.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          STEP 03
+        </div>
+
+        <h3>
+          Earn 21K
+        </h3>
+
+        <p>
+          Complete all six challenge days and you've built the full 21K.
+          Warrior status: earned.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MEDAL GALLERY
+========================= -->
+
+<section class="section">
+
+  <div class="section-title">
+
+    <div class="small">
+      Meet The Medal
+    </div>
+
+    <h2>
+      The Warrior
+    </h2>
+
+    <p>
+      The 21K is right there on the medal.
+      Now you know exactly how you earn it.
+    </p>
+
+  </div>
+
+
+  <div class="gallery">
+
+    <img
+      src="images/warrior-front.jpg"
+      alt="The Warrior medal front"
+    >
+
+    <img
+      src="images/warrior-back.jpg"
+      alt="The Warrior medal back"
+    >
+
+    <img
+      src="images/warrior-detail.jpg"
+      alt="The Warrior medal detail"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     VIDEO
+========================= -->
+
+<section class="section">
+
+  <div class="section-title">
+
+    <div class="small">
+      See It In Action
+    </div>
+
+    <h2>
+      The Warrior.
+    </h2>
+
+    <p>
+      Take a closer look before you enter the ring.
+    </p>
+
+  </div>
+
+
+  <div class="video-box">
+
+    <div>
+
+      <strong>
+        VIDEO COMING HERE
+      </strong>
+
+      <h3>
+        Watch The Warrior Reveal
+      </h3>
+
+      <p>
+        Replace this box with your Warrior video when you're ready.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WHAT YOU GET
+========================= -->
+
+<section class="section">
+
+  <div class="section-title">
+
+    <div class="small">
+      Your Entry Includes
+    </div>
+
+    <h2>
+      What You Get
+    </h2>
+
+  </div>
+
+
+  <div class="get-grid">
+
+
+    <div class="get-item">
+
+      <strong>
+        🏅 Heavy Medal
+      </strong>
+
+      <p>
+        Your physical Warrior medal featuring the 21K.
+      </p>
+
+    </div>
+
+
+    <div class="get-item">
+
+      <strong>
+        📱 Challenge App
+      </strong>
+
+      <p>
+        Your digital companion for taking on the Warrior challenge.
+      </p>
+
+    </div>
+
+
+    <div class="get-item">
+
+      <strong>
+        🥊 6 Challenge Days
+      </strong>
+
+      <p>
+        Build from 1K to 6K and complete 21K across the challenge.
+      </p>
+
+    </div>
+
+
+    <div class="get-item">
+
+      <strong>
+        🏃 Your Way
+      </strong>
+
+      <p>
+        Walk it, run it, split it.
+        The daily target stays the same.
+        The way you reach it is yours.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+
+<section class="final-cta" id="enter">
+
+  <h2>
+    READY TO BECOME A WARRIOR?
+  </h2>
+
+  <p>
+    1K.
+    2K.
+    3K.
+    4K.
+    5K.
+    6K.
+    21K.
+  </p>
+
+  <div class="final-price">
+    £19.99
+  </div>
+
+  <a
+    href="#YOUR-PAYPAL-LINK"
+    class="cta"
+    target="_blank"
+    rel="noopener"
+  >
+    ENTER THE RING
+  </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <strong>
+    WALK RUN <span>WRESTLE</span>
+  </strong>
+
+  <p>
+    Virtual runs. Real medals. Wrestle energy.
+  </p>
+
+</footer>
+
+</body>
+  </html>
